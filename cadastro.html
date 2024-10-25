@@ -1,244 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
     <link rel="stylesheet" href="./style.css">
-
-    <title>Minha Página</title>
-    <!-- Adicionando a biblioteca Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
+<body class="fundo">
+    <main>
+    <div class="container">
+        <h1 id="titulo_cadastro">Cadastro de Cliente</h1>
+        <form action="cadastro.php" method="POST">
+            <label class="label_cadastro" for="nome">Nome:</label>
+            <input class="input_cadastro" type="text" id="nome" name="nome" required>
 
-<body class="fundopagprincipal">
+            <label class="label_cadastro" for="cpf">CPF:</label>
+            <input class="input_cadastro" type="text" id="cpf" name="cpf" required>
 
-    <header>
-        <div class="cabeçalho">
+            <label class="label_cadastro" for="endereco">Endereço:</label>
+            <input class="input_cadastro" type="text" id="endereco" name="endereco" required>
 
+            <label class="label_cadastro" for="telefone">Telefone:</label>
+            <input class="input_cadastro" type="tel" id="telefone" name="telefone" required>
 
-            <div class="alinhar_Home">
+            <label class="label_cadastro" for="email">Email:</label>
+            <input class="input_cadastro_senha" type="email" id="email" name="email" required style="border-radius: 5px;">
 
-                <img class="logo" src="logo.png" width="30px" height="30px">
-                <div class="titulopag">
-                    <h1>Planting Tech</h1>
-                </div>
+            <label class="label_cadastro" for="senha">Criar Senha:</label>
+            <input class="input_cadastro_senha" type="password" id="senha" name="senha" required  style="border-radius: 5px;" >
 
+            <label class="label_cadastro" for="confirmar_senha">Confirmar Senha:</label>
+            <input class="input_cadastro_senha" type="password" id="confirmar_senha" name="confirmar_senha" required  style="border-radius: 5px;">
+
+            <div id="center_cadastro">
+                <button type="submit" id="btn_login"><a href="login.html"> Cadastrar</a></button>
+            
             </div>
-
-            <a href="#Home">Home
-            </a> - <a href="#Metereologico ">Mapa Metereologicoa</a>
-            - <a href="#Medição do Terreno">Medição do Terreno</a> - <a href="#Gráficos">Cadastro Gráfico</a> </p>
-
-
-
-    </header>
-    <div style="margin-top:100px">
-        <div id="Home"></div>
-
-
-
-
-        <div class="textopag">
-
-
-            <div class="imag1div">
-
-
-                <p>
-                    <br>Sua Ferramenta Essencial para o Sucesso na Agricultura</br>
-                    Bem-vindo ao Planting Tech, o sistema desenvolvido para otimizar suas operações agrícolas e
-                    impulsionar
-                    seus resultados. Nossa plataforma oferece uma gama completa de ferramentas e recursos, incluindo a
-                    medição topográfica de terras, recomendações de plantio personalizadas e um sistema completo de
-                    gerenciamento de informações sobre suas lavouras.
-                </p>
-            </div>
-            <div>
-                <p>
-
-
-                <h3>Facilitar o Acompanhamento da Lavoura</h3>
-
-                Com o Planting Tech, você terá acesso a um sistema intuitivo que simplifica o acompanhamento de seus
-                cultivos. A
-                plataforma reúne informações valiosas sobre suas lavouras, permitindo que você monitore o desempenho de
-                cada
-                etapa do processo, desde o plantio até a colheita. Nossa interface amigável e organizada facilita a
-                análise dos
-                dados, fornecendo insights cruciais para tomada de decisões mais assertivas.
-
-                <H4>Controle Total </H4>
-
-                Tenha uma visão abrangente de suas operações, acessando informações detalhadas sobre cada fase do
-                cultivo.
-
-                <h4>Tomada de Decisões Eficazes</h4>
-
-                Baseie suas decisões em dados precisos, garantindo maior produtividade e rentabilidade.
-
-                <H4> Aumento da Eficiência</H4>
-
-
-
-                <h2> Gerencie seus recursos com inteligência, reduzindo desperdícios e otimizando seus investimentos
-                </h2>
-
-
-
-
-</html>
-<div id="Metereologico"></div>
-
-
-<P>
-<h2> Acompanhe o clima aqui </h2>
-</P>
-</div>
-
-<iframe title="Ventus Weather Map Shortcode -24.9555 -53.4552" loading="lazy"
-    style="width: 100%; height: 350px; border-radius: 20px; box-sizing: border-box; "
-    src="https://embed.windy.com/embed2.html?lat=-24.9555&amp;lon=-53.4552&amp;zoom=4&amp;overlay=wind&amp;marker=true&amp;pressure=true&amp;detailLat=-24.9555&amp;detailLon=-53.4552&amp;metricWind=km/h&amp;metricTemp=°C&amp;detail=true&amp;calendar=24&amp;product=ecmwf&amp;level=surface&amp;menu=&amp;message=true&amp;type=map&amp;location=coordinates&amp;radarRange=-1"
-    frameborder="0">
-
-</iframe>
-
-<div id="Medição do Terreno"></div>
-
-<P>
-<h2> Aqui você vai medir seu Terreno </h2>
-</P>
-<iframe class="embed-responsive-item" width="100%" height="500"
-    src="https://geoportal-ibge.maps.arcgis.com/apps/MapSeries/index.html?appid=c26c269f75544597b3c93661e25f28f5"
-    frameborder="0" scrolling="yes"></iframe>
-
-<div id="Gráficos"></div>
-<p>
-<h2 style="padding-bottom: 100px;"> Resultados do seu plantio </h2>
-</p>
-<title>Cadastro de Cultivo</title>
-
-
-<div class="pagina_principal_container">
-    <button type="button" class="botao-semente" id="soja">Soja</button>
-    <button type="button" class="botao-semente" id="milho">Milho</button>
-    <button type="button" class="botao-semente" id="trigo">Trigo</button>
-    <button type="button" class="botao-semente" id="cafe">Café</button>
-    <br><br>
-    <script>
-        // Função para alterar o estilo do botão selecionado
-        const botoes = document.querySelectorAll('.botao-semente');
-    
-        botoes.forEach(function(button) {
-            button.addEventListener('click', function() {
-                // Remove a classe 'selecionado' de todos os botões
-                botoes.forEach(btn => btn.classList.remove('selecionado'));
-                
-                // Adiciona a classe 'selecionado' ao botão clicado
-                this.classList.add('selecionado');
-            });
-        });
-    </script>
-
-    <form action="cadastrar_cultivo.php" method="POST">
-        <label class="label_cadastro">Tipo de Cultivo:</label>
-        <input type="text" name="tipo_cultivo" class="input_cadastro" required>
-
-        <label class="label_cadastro">Quantidade de Agrotóxico (litros):</label>
-        <input type="number" name="quantidade_agro" class="input_cadastro" required>
-
-        <label class="label_cadastro">Quantidade de Sementes (kg):</label>
-        <input type="number" name="quantidade_semente" class="input_cadastro" required>
-        <label for="tipo_adubo">Fertilizantes:</label>
-        <input type="text" name="tipo_adubo" id="tipo_adubo" placeholder="Informe o adubo usado" class="input_cadastro"
-            required>
-
-        <label for="quantidade_insumos">Quantidade de Insumos (kg):</label>
-        <input type="number" name="quantidade_insumos" class="input_cadastro" required>
-
-        <label for="data_plantio">Data do Plantio:</label>
-        <input type="date" name="data_plantio" class="input_cadastro" required>
-
-
-
-
-        <input type="submit" value="Cadastrar" id="save_cliente">
-
-    </form>
-</div>
-</body>
-<div id="Gráficos"></div>
-<h2 style="padding-bottom: 100px;"> Resultados do seu plantio </h2>
-
-<!-- Adicionando o canvas para o gráfico de pizza -->
-<div style="width: 35%; margin: 0 auto; margin-top: -100px; margin-bottom: 100px;">
-    <canvas id="graficoPlantio"></canvas>
-</div>
-</div>
-
-<script>
-    // Configurando o gráfico de pizza
-    const ctx = document.getElementById('graficoPlantio').getContext('2d');
-    const graficoPlantio = new Chart(ctx, {
-        type: 'pie', // Tipo do gráfico: pizza
-        data: {
-            labels: ['Milho', 'Soja', 'Trigo', 'Arroz', 'Café'], // Nomes das culturas
-            datasets: [{
-                label: 'Produção (Toneladas)',
-                data: [120, 150, 180, 90, 700], // Dados de produção
-                backgroundColor: [
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            plugins: {
-                legend: {
-                    position: 'top'
-                },
-                title: {
-                    display: true,
-                    text: 'Produção de Culturas por Toneladas'
-                }
-            }
-        }
-    });
-</script>
-<script>
-
-    function aparecer_menu() {
-        const note = document.querySelector('.menu');
-        note.style.display = 'block';
-    }
-    function sumir_menu() {
-        const note = document.querySelector('.menu');
-        note.style.display = 'none';
-    }
-</div >
-</body >
-
-
-</script>
-<footer style="margin-top:100px">
-
-    <div>
-
-        Planting Tech
-
+            
+            
+        </form>
     </div>
-</footer>
-
+</main>
+</body>
 </html>
